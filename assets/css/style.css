@@ -289,18 +289,23 @@ main {
 .article-row {
     display: flex;
     flex-direction: column;
+    margin-right: 100px;
+    max-width: 600px;
 
 }
 
 .side-row {
     display: flex;
     flex-direction: column;
+    max-width: 400px;
 }
 
 .side-row-body {
-    max-width: 500px;
+    /* max-width: 500px; */
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(230, 230, 230, 1);
 
 }
 
@@ -360,4 +365,19 @@ main {
     line-height: 28px;
     font-size: 22px;
     font-weight: 700;
+}
+
+.side-row-footer  {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.side-row-footer span {
+    margin-right: 25px;
+    font-size: 14px;
+    color: #757575;
+    display: inline-block;
+    margin-bottom: 10px;
 }
