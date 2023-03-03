@@ -284,6 +284,7 @@ main {
     display: flex;
     /* flex-direction: column; */
     margin-top: 50px;
+    align-items: flex-start;
 }
 
 .article-row {
@@ -291,6 +292,8 @@ main {
     flex-direction: column;
     margin-right: 100px;
     max-width: 600px;
+    
+
 
 }
 
@@ -298,6 +301,10 @@ main {
     display: flex;
     flex-direction: column;
     max-width: 400px;
+    position: sticky;
+    top: 115px;
+    right: 0;
+    /* background-color: #ffc017; */
 }
 
 .side-row-body {
