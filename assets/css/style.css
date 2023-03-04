@@ -101,7 +101,7 @@ nav ul li {
   height: 462px;
 }
 
-.hero-container {
+.hero-section-container {
   margin-inline: 64px;
   width: 100%;
   max-width: 1192px;
@@ -153,24 +153,26 @@ h2 {
 /* MAIN STYLES  */
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-.main-container {
-  margin-top: 40px;
-  margin-inline: 64px;
-  max-width: 1192px;
-  width: 100%;
-}
+
 /* TRENDS SECTION */
 .trendings-section {
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* border: 1px solid red; */
   border-bottom: 1px solid rgba(230, 230, 230, 1);
+}
+
+.trendings-section-container {
+  margin-top: 40px;
+  margin-inline: 64px;
+  max-width: 1192px;
+  width: 100%;
 }
 
 .trendings-section-heading {
@@ -178,7 +180,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .trendings-heading-title {
@@ -205,7 +207,7 @@ main {
   width: 350px;
   display: flex;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   padding-left: 30px;
 }
 
@@ -262,13 +264,20 @@ main {
   color: rgba(117, 117, 117, 1);
 }
 
-.article-section {
+/* ARTCILE SECTION STYLES */
+.articles-section {
   display: flex;
-  /* flex-direction: column; */
   margin-top: 50px;
-  align-items: flex-start;
+  justify-content: center;
 }
 
+.articles-section-container {
+  margin-inline: 64px;
+  max-width: 1192px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
 .article-row {
   display: flex;
   flex-direction: column;
