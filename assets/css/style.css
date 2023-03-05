@@ -198,7 +198,7 @@ main {
 .trendings-section-body {
   box-sizing: content-box;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-between;
   height: 100%;
@@ -206,11 +206,8 @@ main {
 }
 
 .trending-item {
-  /* margin-right: 16px; */
-  /* flex-basis: calc(100% - 48px); */
   flex-basis: 33.333333%;
-  /* max-width: 33.333333%; */
-  /* width: 350px; */
+  padding-right: 16px;
   display: flex;
   position: relative;
   margin-bottom: 40px;
