@@ -250,6 +250,12 @@ main {
   margin-left: 8px;
 }
 
+.verified-author svg {
+  height: 16px;
+ vertical-align: middle;
+ margin-left: 4px;
+}
+
 .trending-item-body {
   font-size: 16px;
   line-height: 20px;
@@ -262,6 +268,11 @@ main {
   font-size: 13px;
   line-height: 20px;
   color: rgba(117, 117, 117, 1);
+}
+
+.trend-star svg {
+  height: 16px;
+  vertical-align: middle;
 }
 
 /* ARTCILE SECTION STYLES */
