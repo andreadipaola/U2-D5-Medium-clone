@@ -33,6 +33,10 @@ ul {
   list-style: none;
 }
 
+.invisible-item {
+  display: none;
+}
+
 /* NAV STYLES */
 
 .navbar {
@@ -183,7 +187,7 @@ main {
   margin-bottom: 8px;
 }
 
-.trendings-heading-title {
+.trendings-section-heading-title {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0;
@@ -192,19 +196,21 @@ main {
 }
 
 .trendings-section-body {
+  box-sizing: content-box;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
   justify-content: space-between;
-  flex-basis: 33.3%;
   height: 100%;
   width: 100%;
 }
 
 .trending-item {
-  /* flex-basis: 33%; */
-  width: 350px;
+  /* margin-right: 16px; */
+  /* flex-basis: calc(100% - 48px); */
+  flex-basis: 33.333333%;
+  /* max-width: 33.333333%; */
+  /* width: 350px; */
   display: flex;
   position: relative;
   margin-bottom: 40px;
@@ -243,7 +249,7 @@ main {
   display: block;
 }
 
-.trending-heading-title {
+.trending-item-heading-author {
   font-size: 13px;
   font-weight: 500;
   line-height: 16px;
@@ -256,7 +262,7 @@ main {
  margin-left: 4px;
 }
 
-.trending-item-body {
+.trending-item-body h4{
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0;
@@ -270,15 +276,15 @@ main {
   color: rgba(117, 117, 117, 1);
 }
 
-.trend-star svg {
+.star svg {
   height: 16px;
   vertical-align: middle;
 }
 
-/* ARTCILE SECTION STYLES */
+/* ARTCILES SECTION STYLES */
 .articles-section {
   display: flex;
-  margin-top: 50px;
+  margin-top: 56px;
   justify-content: center;
 }
 
@@ -289,14 +295,89 @@ main {
   display: flex;
   align-items: flex-start;
 }
-.article-row {
+.articles-column {
   display: flex;
   flex-direction: column;
   margin-right: 100px;
   max-width: 600px;
 }
 
-.side-row {
+.article {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-right: 200px;
+  margin-bottom: 48px;
+}
+
+.article-text {
+  margin-right: 20px;
+}
+
+.article-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.article-heading img {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.article-heading-author {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  margin-left: 8px;
+}
+
+.article-title {
+  letter-spacing: 0;
+  line-height: 28px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.article-body p {
+  font-size: 16px;
+  color: rgba(117, 117, 117, 1);
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.article-footer {
+  font-size: 13px;
+  line-height: 20px;
+  color: rgba(117, 117, 117, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-category {
+  border-radius: 100px;
+  padding: 2px 8px 4px;
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.bookmark svg {
+  vertical-align: middle;
+}
+
+.article-img-cover {
+  width: 200px;
+  height: 134px;
+  aspect-ratio: auto 200 / 134;
+}
+
+
+/* SIDE COLUMN STYLES */
+.side-column {
   display: flex;
   flex-direction: column;
   max-width: 400px;
@@ -306,7 +387,7 @@ main {
   /* background-color: #ffc017; */
 }
 
-.side-row-body {
+.side-column-body {
   /* max-width: 500px; */
   display: flex;
   flex-wrap: wrap;
@@ -314,7 +395,8 @@ main {
   border-bottom: 1px solid rgba(230, 230, 230, 1);
 }
 
-.side-row-title {
+
+.side-column-title {
   font-weight: 500;
   font-size: 16px;
   color: rgba(41, 41, 41, 1);
@@ -323,7 +405,7 @@ main {
   margin-bottom: 20px;
 }
 
-.side-row-body a {
+.side-column-body a {
   border: 1px solid rgba(230, 230, 230, 1);
   padding: 6px 16px;
   margin: 0 8px 8px 0;
@@ -331,53 +413,14 @@ main {
   color: #757575;
 }
 
-.article {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  margin-right: 200px;
-  margin-bottom: 50px;
-}
-
-.article-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  vertical-align: middle;
-}
-.article-img-cover {
-  width: 200px;
-  height: 134px;
-  /* aspect-ratio: auto 200 / 134; */
-}
-
-.article-heading {
-  display: flex;
-  align-items: center;
-}
-
-.article-author {
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 20px;
-}
-.article-title {
-  letter-spacing: 0;
-  line-height: 28px;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.side-row-footer {
+.side-column-footer {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   margin-top: 30px;
 }
-.side-row-footer span {
+.side-column-footer span {
   margin-right: 25px;
   font-size: 14px;
   color: #757575;
