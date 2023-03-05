@@ -49,6 +49,7 @@ ul {
   border-bottom: 1px solid var(--black);
   display: flex;
   justify-content: center;
+  transition: background-color 300ms;
 }
 
 .bg-white {
@@ -194,7 +195,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .trendings-section-heading-title {
@@ -219,9 +220,7 @@ main {
   flex-basis: 33.333333%;
   padding-right: 16px;
   display: flex;
-  position: relative;
   margin-bottom: 40px;
-  padding-left: 30px;
 }
 
 .trending-item-number {
@@ -230,9 +229,6 @@ main {
   line-height: 0.8;
   font-size: 30px;
   font-weight: 500;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 
 .trending-item-text {
@@ -303,6 +299,7 @@ main {
   align-items: flex-start;
   justify-content: space-between;
 }
+
 .articles-column {
   display: flex;
   flex-direction: column;
@@ -384,14 +381,15 @@ main {
 
 
 /* SIDE COLUMN STYLES */
+aside {
+  top: 115px;
+  position: sticky;
+}
+
 .side-column {
   display: flex;
   flex-direction: column;
   max-width: 400px;
-  position: sticky;
-  top: 115px;
-  right: 0;
-  /* background-color: #ffc017; */
 }
 
 .side-column-body {
