@@ -37,12 +37,12 @@
             </a>
           </div>
           <div>
-            <ul>
-              <li><a href="">Our story</a></li>
-              <li><a href="">Membership</a></li>
-              <li><a href="">Write</a></li>
-              <li><a href="">Sign In</a></li>
-              <li><button class="cta">Get started</button></li>
+            <ul class="menu">
+              <li><a href="#">Our story</a></li>
+              <li><a href="#">Membership</a></li>
+              <li><a href="#">Write</a></li>
+              <li><a href="#">Sign In</a></li>
+              <li><a href="#" class="nav-cta">Get started</a></li>
             </ul>
           </div>
         </div>
@@ -9265,7 +9265,7 @@
                 Discover stories, thinking, and expertise from writers on any
                 topic.
               </h2>
-              <button class="cta hero-title-btn">Start reading</button>
+              <a href="#" class="hero-cta">Start reading</a>
             </div>
           </div>
         </div>
@@ -9515,7 +9515,7 @@
                 <div class="article-footer">
                   <div class="article-footer-text">
                     <span>Oct 27 · 5 min read ·</span>
-                    <a class="article-category">Aging</a>
+                    <a href="#" class="article-category">Aging</a>
                     <span class="star invisible-item">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -9581,7 +9581,7 @@
                 <div class="article-footer">
                   <div class="article-footer-text">
                     <span>Oct 24 · 6 min read ·</span>
-                    <a class="article-category">Health</a>
+                    <a href="#" class="article-category">Health</a>
                     <span class="star invisible-item">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -9637,7 +9637,7 @@
                 </div>
                 <div class="article-body">
                   <h4 class="article-title">
-                    Don’t Screw Up, You Will Be Found Guilty
+                    Don't Screw Up, You Will Be Found Guilty
                   </h4>
                   <p>
                     Software Engineer, yours is the right to produce
@@ -9647,7 +9647,9 @@
                 <div class="article-footer">
                   <div class="article-footer-text">
                     <span>Oct 15 · 5 min read ·</span>
-                    <a class="article-category">Software Engineering</a>
+                    <a href="#" class="article-category"
+                      >Software Engineering</a
+                    >
                     <span class="star">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -9709,7 +9711,7 @@
                 <div class="article-footer">
                   <div class="article-footer-text">
                     <span>Oct 25 · 11 min read ·</span>
-                    <a class="article-category">Sustainability</a>
+                    <a href="#" class="article-category">Sustainability</a>
                     <span class="star">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -9774,7 +9776,7 @@
                 <div class="article-footer">
                   <div class="article-footer-text">
                     <span>Oct 26 · 7 min read ·</span>
-                    <a class="article-category">Health</a>
+                    <a href="#" class="article-category">Health</a>
                     <span class="star">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -9833,14 +9835,14 @@
                     What I Overheard as an Escape Room Actor
                   </h4>
                   <p>
-                    Lock a group of people in a room and you’ll witness some
+                    Lock a group of people in a room and you'll witness some
                     surprising confessions
                   </p>
                 </div>
                 <div class="article-footer">
                   <div class="article-footer-text">
                     <span>Jan 18, 2020 · 6 min read ·</span>
-                    <a class="article-category"> Experiences</a>
+                    <a href="#" class="article-category"> Experiences</a>
                     <span class="star">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -9906,7 +9908,7 @@
                 <div class="article-footer">
                   <div class="article-footer-text">
                     <span>Oct 24 · 6 min read ·</span>
-                    <a class="article-category">Health</a>
+                    <a href="#" class="article-category">Health</a>
                     <span class="star">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -9989,20 +9991,33 @@
     <!-- MAIN END -->
 
     <script>
-      const navbar = document.querySelector(".navbar");
-      const navbarCta = document.querySelector(".cta");
 
+      // SCRIPT PER IL CAMBIO TEMA DELLA NAVBAR ATTIVATO DALLO SCROLL
       window.addEventListener("scroll", (e) => {
-        event.preventDefault();
+        const navbar = document.querySelector(".navbar");
+        const navCta = document.querySelector(".nav-cta");
+        e.preventDefault();
         if (window.scrollY >= 380) {
           navbar.classList.add("bg-white");
-          navbarCta.classList.add("bg-green");
+          navCta.classList.add("bg-green");
         } else {
           navbar.classList.remove("bg-white");
-          navbarCta.classList.remove("bg-green");
+          navCta.classList.remove("bg-green");
         }
         // console.log(window.scrollY);
       });
+
+      // SCRIPT PER LA VISUALIZZAZIONE RANDOMICA DELLE "M"
+      let showRandomM = setInterval(() => {
+        let allM = document.querySelectorAll("g[stroke-linecap='butt']");
+        let randomMIndex = Math.floor(Math.random() * allM.length);
+        let singleRandomM = allM[randomMIndex];
+
+        let opacity = parseInt(singleRandomM.getAttribute("opacity"));
+        opacity === 0
+          ? singleRandomM.setAttribute("opacity", 1)
+          : singleRandomM.setAttribute("opacity", 0);
+      }, 40);
     </script>
   </body>
 </html>
