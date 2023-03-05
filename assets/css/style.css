@@ -375,10 +375,12 @@ main {
   padding: 2px 8px 4px;
   background-color: rgba(242, 242, 242, 1);
   color: rgba(117, 117, 117, 1);
+  transition: background 300ms ease 0s;
 }
-/* .article-category a {
-  color: rgba(117, 117, 117, 1);
-} */
+
+.article-category:hover {
+  background-color: rgb(230, 230, 230);
+}
 
 .bookmark svg {
   vertical-align: middle;
@@ -437,7 +439,7 @@ aside {
   margin: 24px 0;
 }
 
-.side-column-footer span {
+.side-column-footer a {
   margin-right: 26px;
   margin-bottom: 8px;
   font-size: 14px;
