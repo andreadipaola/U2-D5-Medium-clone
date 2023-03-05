@@ -9662,5 +9662,21 @@
       </section>
       <!-- ARTCILES SECTION END -->
     </main>
+    <!-- MAIN END -->
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+      const navbarCta = document.querySelector(".cta");
+
+      window.addEventListener("scroll", (e) => {
+        
+        navbar.classList.add("bg-white");
+        navbarCta.classList.add("bg-green")
+        console.log(window.position);
+        // console.log("I'm scrolling");
+        let target = e.target;
+      })
+      
+    </script>
   </body>
 </html>
