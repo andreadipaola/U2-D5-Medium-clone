@@ -94,6 +94,12 @@ nav ul li {
   }
 }
 
+@media screen and (max-width: 551px) {
+  nav ul li:nth-child(4) {
+    display: none;
+  }
+}
+
 .nav-cta {
   font-size: 14px;
   line-height: 20px;
@@ -125,22 +131,22 @@ nav ul li {
   right: 0;
 }
 
-@media screen and (max-width: 728px) {
-  .hero-svg-container  {
-    display: none;
+@media screen and (max-width: 1080px) {
+  .hero-svg-container {
+    right: -244px;
   }
 }
 
 @media screen and (max-width: 903px) {
   .hero-svg-container {
     right: -140px;
-}
+  }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 728px) {
   .hero-svg-container {
-    right: -244px;
-}
+    display: none;
+  }
 }
 
 .hero-svg-container svg {
@@ -183,15 +189,21 @@ nav ul li {
   justify-content: center;
 }
 
-@media screen and (max-width: 903px) {
+@media screen and (max-width: 1080px) {
   .hero-title-box {
-    width: 500px; 
+    width: 550px;
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 903px) {
   .hero-title-box {
-    width: 550px; 
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 551px) {
+  .hero-title-box {
+    width: 100%;
   }
 }
 
@@ -204,12 +216,19 @@ nav ul li {
   font-family: "Spectral", serif;
 }
 
-
 @media screen and (max-width: 903px) {
   .hero-title-box h1 {
     font-size: 89px;
     letter-spacing: -0.055em;
-    line-height: 88px;
+    line-height: 89px;
+  }
+}
+
+@media screen and (max-width: 551px) {
+  .hero-title-box h1 {
+    font-size: 74px;
+    letter-spacing: -0.05em;
+    line-height: 70px;
   }
 }
 
@@ -221,14 +240,14 @@ nav ul li {
   color: rgba(41, 41, 41, 1);
 }
 
-@media screen and (min-width: 550px) and (max-width: 904px) {
+@media screen and (min-width: 552px) and (max-width: 1080px) {
   .hero-title-box h2 {
     width: 80%;
   }
 }
-@media screen and (min-width: 904px) and (max-width: 1080px) {
+@media screen and (max-width: 551px) {
   .hero-title-box h2 {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -276,6 +295,12 @@ main {
   }
 }
 
+@media screen and (max-width: 728px) {
+  .trendings-section-container {
+    margin-inline: 24px;
+  }
+}
+
 .trendings-section-heading {
   width: 100%;
   display: flex;
@@ -320,7 +345,6 @@ main {
     flex-basis: 100%;
   }
 }
-
 
 .trending-item-number {
   color: rgba(230, 230, 230, 1);
@@ -407,7 +431,7 @@ main {
 }
 
 @media screen and (max-width: 903px) {
-  .articles-section-container{
+  .articles-section-container {
     margin-inline: 0;
   }
 }
@@ -450,12 +474,11 @@ main {
 @media screen and (max-width: 727px) {
   .articles-column {
     padding-inline: 24px;
-    margin-top: 52px;
   }
 }
 
 .article-text {
-  margin-right: 20px;
+  margin-right: 26px;
   width: 100%;
 }
 
@@ -487,11 +510,24 @@ main {
   margin-bottom: 4px;
 }
 
+@media screen and (max-width: 727px) {
+  .article-title {
+    line-height: 20px;
+    font-size: 16px;
+  }
+}
+
 .article-body p {
   font-size: 16px;
   color: rgba(117, 117, 117, 1);
   line-height: 20px;
   margin-bottom: 8px;
+}
+
+@media screen and (max-width: 727px) {
+  .article-body p {
+    display: none;
+  }
 }
 
 .article-footer {
@@ -511,6 +547,15 @@ main {
   transition: background 300ms ease 0s;
 }
 
+@media screen and (max-width: 551px) {
+  .article-category {
+    display: none;
+  }
+  .article-footer-text span:nth-child(2) {
+    display: none;
+  }
+}
+
 .article-category:hover {
   background-color: rgb(230, 230, 230);
 }
@@ -523,6 +568,14 @@ main {
   width: 200px;
   height: 134px;
   aspect-ratio: auto 200 / 134;
+}
+
+@media screen and (max-width: 727px) {
+  .article-img-cover {
+    width: 150px;
+    height: 100px;
+    aspect-ratio: auto 150 / 100;
+  }
 }
 
 /* SIDE COLUMN STYLES */
@@ -557,6 +610,12 @@ aside {
   border-bottom: 1px solid rgba(230, 230, 230, 1);
 }
 
+@media screen and (max-width: 727px) {
+  .side-column-body {
+    padding-inline: 24px;
+  }
+}
+
 .side-column-title {
   font-weight: 500;
   font-size: 16px;
@@ -569,6 +628,12 @@ aside {
 @media screen and (max-width: 903px) {
   .side-column-title {
     padding-inline: 48px;
+  }
+}
+
+@media screen and (max-width: 727px) {
+  .side-column-title {
+    padding-inline: 24px;
   }
 }
 
