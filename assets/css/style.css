@@ -606,8 +606,13 @@ aside {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 24px;
-  padding-inline: 48px;
   border-bottom: 1px solid rgba(230, 230, 230, 1);
+}
+
+@media screen and (max-width: 903px) {
+  .side-column-body {
+    padding-inline: 48px;
+  }
 }
 
 @media screen and (max-width: 727px) {
